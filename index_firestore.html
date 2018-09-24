@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+
+    <h1>Cloud Cafe</h1>
+
+            <div class="content">
+
+                <form id="add-cafe-form"></form>
+
+                <ul id="cafe-list"></ul>
+
+            </div>
+
+            <script>
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyD3dB8L07bQF5uhQYS5KMoJsoXTuVNs3Fw",
+                    authDomain: "new-project-learning-e27af.firebaseapp.com",
+                    databaseURL: "https://new-project-learning-e27af.firebaseio.com",
+                    projectId: "new-project-learning-e27af",
+                    storageBucket: "new-project-learning-e27af.appspot.com",
+                    messagingSenderId: "864740331378"
+                };
+                firebase.initializeApp(config);
+            </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="dialog-polyfill.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

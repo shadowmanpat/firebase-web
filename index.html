@@ -1,0 +1,117 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Firebase Web Basics</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dialog-polyfill.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+      <dialog id="loginDialog" class="mdl-dialog">
+        <h4 class="mdl-dialog_title">Allow data collection?</h4>
+        <p>
+          Allowing us to collect data will let us get you the information you want faster.
+        </p>
+        <p id="loginError"></p>
+        <div class="mdl-dialog_actions">
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="email">
+              <label class="mdl-textfield__label" for="email">Email</label>
+            </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="password">
+            <label class="mdl-textfield__label" for="password">Password</label>
+          </div>
+
+          <!-- Accent-colored raised button with ripple -->
+          <button id="loginBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            Sign In
+          </button>
+          <!-- MDL Spinner Component -->
+          <div id="loadingProgress"class="mdl-spinner mdl-js-spinner is-active"></div>
+
+          <!--<button type="button" class="mdl-button">Agree</button>-->
+          <!--<button type="button" class="mdl-button close">Agree</button>-->
+        </div>
+
+      </dialog>
+
+      <div class="login-cover">
+
+        <!-- MDL Spinner Component -->
+        <div class="page-loader mdl-spinner mdl-js-spinner is-active"></div>
+
+      </div>
+
+      <!--Main Page content-->
+      <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout-icon"></div>
+          <div class="mdl-layout__header-row">
+            <span class="mdl-layout__title">Firebase Web App
+              <span class="page-title-span">|</span>
+              <span class="page-title-span">Home</span>
+            </span>
+            <div class="mdl-layout-spacer"></div>
+
+            <nav class="mdl-navigation">
+              <!-- Colored raised button -->
+              <button id="logoutBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored">
+                Sign Out <i class="button-right-icon material-icons">
+                account_circle
+              </i>
+              </button>
+            </nav>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+        </div>
+      </div>
+        <!--<div class = "mainDiv" align = "right">-->
+      <!--<h1 id = "fireHeading" align="left">Firebase Web App</h1>-->
+      <!--<textarea id="mainText" placeholder="Enter text here ..."></textarea>-->
+      <!--<button id="mainButton" onclick="submitClick()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>-->
+
+
+
+
+    <!--</div>-->
+
+    <!--<div >-->
+      <!--<h1> All users</h1>-->
+      <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+          <!--<td>Name</td>-->
+          <!--<td>Email</td>-->
+
+        <!--</tr>-->
+        <!--<tbody id="table_body">-->
+
+        <!--</tbody>-->
+        <!--</thead>-->
+      <!--</table>-->
+    <!--</div>-->
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+       
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="dialog-polyfill.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
